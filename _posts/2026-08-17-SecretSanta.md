@@ -17,11 +17,6 @@ The method wasn't elegant, but it did work. Basically, it loops through each fam
 
 That's it! Keepin' it stupid simple.
 
-<!-- <figure>
-<figcaption><b>Figure 1:</b> Baby's First Secret Santa "Algorithm"</figcaption>
-<figcaption><b>Note:</b> the variable "exclusions" is simply a Python dictionary of the form {giver:[exclusion1, exclusion2, ...]}</figcaption> -->
-
-
 
 ```python
     def secret_santa_generator(exclusions):
@@ -46,3 +41,9 @@ That's it! Keepin' it stupid simple.
 Eventually, I turned this into a usable desktop application, courtesy of the tkinter Python package.
 
 Before the bonafide application was made, I just ran it locally as a script, and sent the results to my MIL to disseminate to the rest of the family. 
+
+## The Graph Theory Approach
+
+I didn't think much of the results; all the exclusion criteria were met and the script had the flexibility to add more or remove exclusions if needed. 
+
+> There are three circles here. Dad, [Brother #3] and I are part of the smallest circle. 
