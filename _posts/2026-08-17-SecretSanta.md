@@ -50,7 +50,7 @@ I didn't think much of the results; all the exclusion criteria were met and the 
 
 (This particular BIL has a PhD so I shouldn't have been surprised by his sagacity.)
 
-This comment reminded me of something I had thought about when first approaching this problem: the problem of drawing names for Secret Santa can be represented as a directional graph.
+This comment reminded me of something I had thought about when first approaching this problem: the problem of drawing names for Secret Santa can be represented as a directional graph and we could probably find a Hamiltonian Cycle between all the nodes (family members).
 
 A directional graph (or digraph) is a set of nodes connected by directional edges. For example, if Brother #1 drew Brother #4 last year, then in this year's Secret Santa Brother #1 cannot draw Brother #4, but Brother #4 is allowed to draw Brother #1. We are looking for a Hamiltonian Cycle in our graph: a cycle that goes through every node (family member in Secret Santa) exactly once, ending at the same node where it began.  
 
@@ -58,5 +58,7 @@ In other words, the Secret Santa Problem is a version of the Traveling Salesman 
 
 > Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?
 
-The difference being we are not looking to minimize (or maximize) the distance travelled between all nodes in the Hamiltonian Cycle, we simply want to find any cycle (if it exists). This isn't actually a particularly helpful, since the TSP is a NP-hard problem (nondeterministic polynomial). This means it is **at least** as complex as the hardest (essentially slowest to solve) problems in NP time. In other words, there exist no "fast" solutions or algorithms to solve these problems. Dijkstra's and A* won't work as they find the fastest route between two nodes, not necessarily creating a Hamiltonian Cycle. There are some heuristics that can help on edges cases, and dynamic programming offers an approach to reduce the the number of routes checked in a brute force algorithm
+The difference being we are not looking to minimize (or maximize) the distance travelled between all nodes in the Hamiltonian Cycle, we simply want to find any cycle (if it exists). This isn't actually a particularly helpful, since the TSP is a NP-hard problem (nondeterministic polynomial). This means it is **at least** as complex as the hardest (essentially slowest to solve) problems in NP time. In other words, there exist no "fast" solutions or algorithms to solve these problems. Dijkstra's and A* won't work as they find the fastest route between two nodes, not necessarily creating a Hamiltonian Cycle. There are some heuristics that can help on edges cases, and dynamic programming offers an approach to reduce the the number of routes checked in a brute force algorithm.
+
+This is where representing the allowed giver-receiver pairs in our Secret Santa drawing as a digraph comes in handy. 
 
