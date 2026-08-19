@@ -44,6 +44,12 @@ Before the bonafide application was made, I just ran it locally as a script, and
 
 ## The Graph Theory Approach
 
-I didn't think much of the results; all the exclusion criteria were met and the script had the flexibility to add more or remove exclusions if needed. 
+I didn't think much of the results; all the exclusion criteria were met and the script had the flexibility to add more or remove exclusions if needed. But, shortly after the Secret Santa results were circulated to the rest of family, I was reminded that the family I married into has a propensity for nerdiness with this reply-all email:
 
 > There are three circles here. Dad, [Brother #3] and I are part of the smallest circle. 
+
+(This particular BIL has a PhD so I shouldn't have been surprised by his sagacity.)
+
+This comment reminded me of something I had thought about when first approaching this problem: the problem of drawing names for Secret Santa can be represented as a directional graph.
+
+A directional graph (or digraph) is a set of nodes connected by directional edges. For example, if Brother #1 drew Brother #4 last year, then in this year's Secret Santa Brother #1 cannot draw Brother #4, but Brother #4 is allowed to draw Brother #1. The first place your mind might go is the Traveling Salesman Problem. The difference
