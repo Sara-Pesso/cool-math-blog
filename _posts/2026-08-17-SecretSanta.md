@@ -52,8 +52,7 @@ I didn't think much of the results; all the exclusion criteria were met and the 
 
 This comment reminded me of something I had thought about when first approaching this problem: the problem of drawing names for Secret Santa can be represented as a directional graph.
 
-A directional graph (or digraph) is a set of nodes connected by directional edges. For example, if Brother #1 drew Brother #4 last year, then in this year's Secret Santa Brother #1 cannot draw Brother #4, but Brother #4 is allowed to draw Brother #1. The first place your mind might go is the Traveling Salesman Problem. 
+A directional graph (or digraph) is a set of nodes connected by directional edges. For example, if Brother #1 drew Brother #4 last year, then in this year's Secret Santa Brother #1 cannot draw Brother #4, but Brother #4 is allowed to draw Brother #1. We are looking for a Hamiltonian Cycle in our graph: a cycle that goes through every node (family member in Secret Santa) exactly once, ending at the same node where it began.  
 
-Like the Traveling Salesman Problem (TSP) we only go to each node only one time and need to end up back at the node we started. Such a path is known as a Hamiltonian Cycle. In fact, if there were no exclusions for spouses, the Secret Santa Problem would be the same as the TSP-- and therefore using an efficient algorithm like Dijkstra's or A* would be a valid way to draw names for Secret Santa.
+In other words, the Secret Santa Problem is a version of the Traveling Salesman Problem. 
 
-The difference here is we can't actually go to the nodes in every order since some edges (i.e., some giver-reciever pairings) are excluded. 
