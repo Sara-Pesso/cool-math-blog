@@ -1,6 +1,6 @@
 ---
 title: "The Secret Santa Question"
-date: 2026-08-17
+date: 2026-08-19
 ---
 
 My husband being one of eight children (half of which are married with kids) means that getting a gift for everyone in the family each Christmas isn't financially feasiable. To remedy this, my MIL began the tradiition of using a Secret Santa approach to gift giving: each member of the family is (randomly) assigned to give one other person a gift. This way, we know everyone is giving to one other person, and recieving from one other person.
@@ -66,7 +66,7 @@ For the uninitiated, DFS is simply a search algorithm. Starting at any node, cal
 
 For example in the diagram below, starting at Husband A, we first traverse to Wife B using DFS, which is a legal move. Then, from Wife B, we go to Unmarried Sibling 1. From Unmarried Sibling 1 we first try Unmarrried Sibling 2, then to Husband B, but there is no way to pass through Wife A without first going back to Husband A (the start of the Cycle). So we have to backtrack to Unmarried Sibling 2, then go to Wife A instead, so on and so forth until the non-unique Hamiltonian Cycle is found. 
 
-![Example Secret Santa Digraph](image.png)
+<!-- ![Example Secret Santa Digraph](image.png) -->
 
 ```text 
 1. Make matrix describing the directional edges of the graph (that is, allowed/excluded giver-reciever pairings)
