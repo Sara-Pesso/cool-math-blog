@@ -69,7 +69,7 @@ For example in the diagram below, starting at Husband A, we first traverse to Wi
 
 ![Example Digraph](../../../assets/images/digraph%20example.png)
 
-
+The basic pseudocode the Python Script uses is something like this:
 
 ```text 
 1. Make matrix describing the directional edges of the graph (that is, allowed/excluded giver-reciever pairings)
@@ -92,4 +92,4 @@ The full Python script implementing DFS using a user inputted CSV of exclusions 
 
 The resultant Hamiltonian Cycle basically gives us a path that tells us "A gives to B, who gives to C, who gives to ..., who gives to A", rather than using a guess and check method. If the digraph was non-Hamiltonian, we would simply break the family in smaller cycles using DFS. Each time DFS finds a smaller cycle, those family members are removed from consideration until all family members have been used in a cycle. 
 
-
+Ultimately, I'd like to make my Secret Santa tkinter app use the DFS script instead of the guess-and-check method.
