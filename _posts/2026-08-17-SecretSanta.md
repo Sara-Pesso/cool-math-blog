@@ -42,7 +42,7 @@ Eventually, I turned this into a usable desktop application, courtesy of the tki
 
 Before the bonafide application was made, I just ran it locally as a script, and sent the results to my MIL to disseminate to the rest of the family. 
 
-## The Graph Theory Approach
+## The Better Brute Force Approach with a Sprinkle of Graph Theory
 
 I didn't think much of the results; all the exclusion criteria were met and the script had the flexibility to add more or remove exclusions if needed. But, shortly after the Secret Santa results were circulated to the rest of family, I was reminded that the family I married into has a propensity for nerdiness with this reply-all email:
 
@@ -54,5 +54,9 @@ This comment reminded me of something I had thought about when first approaching
 
 A directional graph (or digraph) is a set of nodes connected by directional edges. For example, if Brother #1 drew Brother #4 last year, then in this year's Secret Santa Brother #1 cannot draw Brother #4, but Brother #4 is allowed to draw Brother #1. We are looking for a Hamiltonian Cycle in our graph: a cycle that goes through every node (family member in Secret Santa) exactly once, ending at the same node where it began.  
 
-In other words, the Secret Santa Problem is a version of the Traveling Salesman Problem. 
+In other words, the Secret Santa Problem is a version of the Traveling Salesman Problem (TSP) which asks:
+
+> Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?
+
+The difference being we are not looking to minimize (or maximize) the distance travelled between all nodes in the Hamiltonian Cycle, we simply want to find any cycle (if it exists). This isn't actually a particularly helpful, since the TSP is a NP-hard problem (nondeterministic polynomial). This means it is **at least** as complex as the hardest (essentially slowest to solve) problems in NP time. In other words, there exist no "fast" solutions or algorithms to solve these problems. Dijkstra's and A* won't work as they find the fastest route between two nodes, not necessarily creating a Hamiltonian Cycle. There are some heuristics that can help on edges cases, and dynamic programming offers an approach to reduce the the number of routes checked in a brute force algorithm
 
