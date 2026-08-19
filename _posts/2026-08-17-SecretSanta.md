@@ -64,6 +64,10 @@ This is where representing the allowed giver-receiver pairs in our Secret Santa 
 
 For the uninitiated, DFS is simply a search algorithm. Starting at any node, call it node 0, we traverse to an adjacent node, call it node 1. At node 1, we attempt to traverse to a new node that we haven't already passed through. If such a node exists, we traverse to it, call it node 2. If no such node exists, we backtrack to node 0 and attempt to traverse to an adjacent node that is not node 1. Then this process repeats until either 1) a Hamiltonian Path is found, landing us back at node 0, or 2) we ahve exhausted every possible path and can conclude that our digraph is non-Hamiltonian. 
 
+For example in the diagram below, starting at Husband A, we first traverse to Wife B using DFS, which is a legal move. Then, from Wife B, we go to Unmarried Sibling 1. From Unmarried Sibling 1 we first try Unmarrried Sibling 2, then to Husband B, but there is no way to pass through Wife A without first going back to Husband A (the start of the Cycle). So we have to backtrack to Unmarried Sibling 2, then go to Wife A instead, so on and so forth until the non-unique Hamiltonian Cycle is found. 
+
+![Example Secret Santa Digraph](image.png)
+
 ```text 
 1. Make matrix describing the directional edges of the graph (that is, allowed/excluded giver-reciever pairings)
 
@@ -78,6 +82,10 @@ For the uninitiated, DFS is simply a search algorithm. Starting at any node, cal
         If conditions are met, save Possible node as current node, and repeat DFS
     - Repeat DFS until back at node 0
 
-4. Once (or if) a Hamiltonian Cycle is found through the Secret Santa digraph, display the results using the 
+4. Once (or if) a Hamiltonian Cycle is found through the Secret Santa digraph, display the results. 
 ```
+
+The full Python script implementing DFS using a user inputted CSV of exclusions can be found on my GitHub [here](https://github.com/Sara-Pesso/secret-santa-app/blob/main/secret_santa_graph.py).
+
+The resultant Hamiltonian Cycle basically gives us a path that tells us "A gives to B, who gives to C, who gives to ..., who gives to A", rather than using a guess and check method. If the digraph was non-Hamiltonian, we would simply break the family in smaller cycles using DFS. Each time DFS finds a smaller cycle, those family members are removed from consideration until all family members have been used in a cycle. 
 
