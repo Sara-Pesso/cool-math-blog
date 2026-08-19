@@ -62,13 +62,22 @@ The difference being we are not looking to minimize (or maximize) the distance t
 
 This is where representing the allowed giver-receiver pairs in our Secret Santa drawing as a digraph comes in handy. Turning this information into a matrix where a 1 represents an allowable giver-reciever pairing and 0 is an exclusion, we can apply Depth First Search (DFS), also known as backtracking, to traverse our graph (matrix for the computer) to find a Hamiltionian Cycle (if one exists) using Python.
 
-For the uninitiated, DFS is simply a search algorithm. Starting at any node, call it node 0, we traverse to an adjacent node, call it node 1. At node 1, we attempt to traverse to a new node that we haven't already passed through. If such a node exists, we traverse to it, call it node 2. If no such node exists, we skip back to node 0 and attempt to traverse to an adjacent node that is not node 1. Then this process repeats until either 1) a Hamiltonian Path is found, landing us back at node 0, or 2) we ahve exhausted every possible path and can conclude that our digraph is non-Hamiltonian. 
+For the uninitiated, DFS is simply a search algorithm. Starting at any node, call it node 0, we traverse to an adjacent node, call it node 1. At node 1, we attempt to traverse to a new node that we haven't already passed through. If such a node exists, we traverse to it, call it node 2. If no such node exists, we backtrack to node 0 and attempt to traverse to an adjacent node that is not node 1. Then this process repeats until either 1) a Hamiltonian Path is found, landing us back at node 0, or 2) we ahve exhausted every possible path and can conclude that our digraph is non-Hamiltonian. 
 
 ```text 
 1. Make matrix describing the directional edges of the graph (that is, allowed/excluded giver-reciever pairings)
 
 2. Initialize an empty 1 x n (where n is the number of family members in the Secret Santa drawing) vector that will hold the node order of the Hamiltonian Cycle (should it exist)
 
-3. Depth First Search
+3. Depth First Search:
+    - Save current node in Hamiltonian Cycle vector
+    - From current node
+    - Iterate through all other nodes checking if:
+        1) Possible node is adjacent to node X
+        2) Possible node is not already in path
+        If conditions are met, save Possible node as current node, and repeat DFS
+    - Repeat DFS until back at node 0
+
+4. Once (or if) a Hamiltonian Cycle is found through the Secret Santa digraph, display the results using the 
 ```
 
