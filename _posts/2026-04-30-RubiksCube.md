@@ -1,3 +1,8 @@
+---
+title: "Rubik’s Cube Solvability using Group Theory"
+date: 2026-04-30
+---
+
 # Introduction
 
 In 1878, puzzle maker Sam Loyd released a 15-square puzzle with a prize
