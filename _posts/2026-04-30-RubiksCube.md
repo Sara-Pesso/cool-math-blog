@@ -2,6 +2,7 @@
 title: "Rubik’s Cube Solvability using Group Theory"
 date: 2026-04-30
 ---
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
@@ -11,6 +12,9 @@ date: 2026-04-30
   });
 </script>
 
+<script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 # Introduction
 
