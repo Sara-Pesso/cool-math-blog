@@ -122,7 +122,7 @@ We can do this with a counter example. Consider $R\cdot U$ and
 $U\cdot R$. Performing each of these moves on the Pocket Cube starting
 in the solved state, results in the states in Figure
 [\[fig:RU\]](#fig:RU){reference-type="ref" reference="fig:RU"} and
-Figure [1](#fig:UR){reference-type="ref" reference="fig:UR"},
+Figure [1]\@ref(fig:UR),
 respectively. Clearly, $RU \not = UR$. Therefore, $G$ is non-abelian in
 the 2x2 case.\
 \
