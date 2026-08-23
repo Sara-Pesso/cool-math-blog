@@ -157,9 +157,18 @@ always available.\
 \
 Using the previous observation, it becomes more obvious that any one of
 the 6 Basic Moves can be generated from the other 5. That is,
-$$G = <L,R,U,D,F>$$ $$G = <L,R,U,D,B>$$ $$G = <L,R,U,F,B>$$
-$$G = <L,R,D,F,B>$$ $$G = <L,U,D,F,B>$$ $$G = <R,U,D,F,B>$$ are all
-generating sets, and $(G,\cdot)$ is **five-generated** [@Garron]. An
+$$G = <L,R,U,D,F>$$
+
+$$G = <L,R,U,D,B>$$
+
+$$G = <L,R,U,F,B>$$
+
+$$G = <L,R,D,F,B>$$
+
+$$G = <L,U,D,F,B>$$
+
+$$G = <R,U,D,F,B>$$
+are all generating sets, and $(G,\cdot)$ is **five-generated** [@Garron]. An
 example from Garron's paper is that
 
 $$D = (L' R FF BB L' R) U (L' R FF BB L' R)$$
@@ -218,7 +227,10 @@ his paper, so we will show it here:
   $x'\in <g>$, such that $xx' = x'x = e_G$. Let $x' = g^{k-1}$, where
   $k$ is such that $g^k = e_G$ from the proof of the Identity Element.
   Then, $xx' = x'x = e_G$ becomes
-  $$g\cdot g^{k-1} = g^{k-1}\cdot g = e_G$$ which holds
+
+  $$g\cdot g^{k-1} = g^{k-1}\cdot g = e_G$$
+
+  which holds
   $\forall g\in G$. Therefore, the inverses of all elements exist in
   $<g>$.
 
@@ -280,8 +292,11 @@ Notice $\forall c\in C_0$ $$c\mapsto c_C=\begin{bmatrix}
 \end{bmatrix} = e_C$$ since $\forall c\in C_o$ they do not permute
 cubelets, only orientations within cubicles. So, $\forall c\in C_o$,
 $c = e$ or the identity at the cubelet level. Now, it is easy to see at
-the cubelet level $\forall c\in C_o$ and $g\in G$
-$$gcg' \mapsto g_Cc_Cg_C' = g_Ce_Cg_C' = g_Cg_C' = e_C$$ This means that
+the cubelet level $\forall c\in C_o$ and $g\in G$,
+
+$$gcg' \mapsto g_Cc_Cg_C' = g_Ce_Cg_C' = g_Cg_C' = e_C$$ 
+
+This means that
 $gcg'$ does not permute any cubelets $\forall c\in C_o$ and
 $\forall g\in G$. Therefore, $gcg' \in C_o$, implying
 $C_o \triangleleft G$, as desired.
@@ -311,7 +326,7 @@ how we are labeling each cube. The corner cubicles are labeled 1 through
 occupying that cubicle. For example, cubicle 3 will always be the
 top-right cubicle to the user, but any of the 8 corner cubes may be
 filling that position (see Figure [2](#fig:cube1){reference-type="ref"
-reference="fig:cube1"}).The smae is done for the 12 edge cubicles.\
+reference="fig:cube1"}).The same is done for the 12 edge cubicles.\
 \
 We also need to keep track of how each corner and edge piece are
 oriented within their current cubicles. To facilitate this, we will need
@@ -360,7 +375,9 @@ configuration of our Rubik's Cube if and only if The Fundamental Theorem
 of Cube Theory (FTCT) for the 3x3 Rubik's Cube is
 satisfied[@Bobzien][@sfucubology]. The FTCT has three criteria:
 
-- Equal parity of permutations: $$sgn(\rho) = sgn(\theta)$$
+- Equal parity of permutations: 
+
+$$sgn(\rho) = sgn(\theta)$$
 
 - $v_1+v_2+...+v_8 \equiv  0$ (mod 3)
 
@@ -532,7 +549,10 @@ subsequent section! For now, just bear with it through this algorithm:
 ### Commutators.
 
 Commutators are moves in $(G,\cdot)$ that take the form [@sweeney2022]
-$$[A,B] = ABA'B'$$ As an example, let's examine the first commutator
+
+$$[A,B] = ABA'B'$$ 
+
+As an example, let's examine the first commutator
 from the 2x2 Algorithm: $$[R,U]=RUR'U'$$ There are only 2 faces that are
 being permuted by $[R,U]$: $R$ and $U$. We move both, and then undo
 both. These faces have one cubicle in common: cubicle 3 (see Figure
@@ -666,7 +686,10 @@ to make our impossible Rubik's Cube is:
 To begin, let's examine and verify that $[R,U]$ from the solving
 algorithm is legal move and justify it. Looking at the Pocket Cube FTCT,
 the only criteria we need to meet is
-$$v_1+v_2+...+v_2 \equiv  0 \text{ (mod 3)}$$ From Figures
+
+$$v_1+v_2+...+v_2 \equiv  0 \text{ (mod 3)}$$ 
+
+From Figures
 [\[fig:ru_up\]](#fig:ru_up){reference-type="ref" reference="fig:ru_up"}
 and [7](#fig:ru_d){reference-type="ref" reference="fig:ru_d"} we can
 calculate this quantity.
