@@ -2,11 +2,7 @@
 title: "Rubik’s Cube Solvability using Group Theory"
 date: 2026-04-30
 ---
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script type="text/javascript" async
-  src="https://cloudflare.com">
-</script>
-
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
 # Introduction
 
