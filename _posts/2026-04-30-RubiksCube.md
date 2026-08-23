@@ -424,7 +424,7 @@ which is the same as the number of all permutations of the Rubik's Cube
 we found earlier, regardless of legality.
 
 - **Group order for the 3x3 Rubik's Cube.** Using the FTCT, we can
-  compute $|G|$. From the product group, $\|\mathbb{Z}^8_{3}\| = 3^8$ , but
+  compute $|G|$. From the product group, $|\mathbb{Z}_{3}^8| = 3^8$ , but
   the sum of the corner orientations, $v_1+...+v_8$, needs to be
   $\equiv 0$ (mod 3), which only happens for $\frac{1}{3}$ of all
   possible sums. Similarly, $|\mathbb{Z}_2^{12}| =2^{12}$, but the sum
