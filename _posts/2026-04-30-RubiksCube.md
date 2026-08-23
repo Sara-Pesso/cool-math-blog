@@ -430,8 +430,9 @@ we found earlier, regardless of legality.
 
    but the sum of the corner orientations, $v_1+...+v_8$, needs to be
   $\equiv 0$ (mod 3), which only happens for $\frac{1}{3}$ of all
-  possible sums. Similarly, $|\mathbb{Z}_2^12| =2^12$, but the sum
-  of the edge orientations, $w_1+w_2+..+w_{12} \equiv 0$ (mod 2), which
+  possible sums. Similarly, 
+  $$|\mathbb{Z}_2^12| =2^12$$
+  but the sum of the edge orientations, $w_1+w_2+..+w_{12} \equiv 0$ (mod 2), which
   only happens for $\frac{1}{2}$ of the sums. Finally,
   $sgn(\rho) = sgn(\theta)$, clearly, this only happens $\frac{1}{2}$ of
   the time as well. So, only
