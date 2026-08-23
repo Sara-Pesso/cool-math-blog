@@ -145,7 +145,7 @@ data-label="fig:UR"></span></p>
 
 Because we have shown that $G$ is not abelian, we know that it is **not
 cyclic**. That is, $\not \exists g \in G$ such that
-$<g> = \{g^n: n\in \mathbb{N}\}$ [@textbook]. But, there are some
+$\lt g \gt = \{g^n: n\in \mathbb{N}\}$ [@textbook]. But, there are some
 generating sets. An obvious generator is the set of our 6 Basic Moves
 (plus the identity or empty move) with their inverses:
 $<e,L,R,U,D,F,B,L',R',U',D',F',B'>$. Maybe less obvious is that just the
@@ -205,26 +205,26 @@ Unfortunately, because $(G,\cdot)$ is not cyclic, the number and orders
 of the subgroups is not obvious. So, we will just discuss an interesting
 one here:\
 \
-For any $g \in G$, $<g> \leq G$ [@Garron]. Garron doesn't prove this in
+For any $g \in G$, $\lt g \gt \leq G$ [@Garron]. Garron doesn't prove this in
 his paper, so we will show it here:
 
-- **Subset.** $<g> \subset G$, since $g\in G$ and $G$ is closed under
+- **Subset.** $\lt g \gt \subset G$, since $g\in G$ and $G$ is closed under
   $\cdot$
 
-- **Closure**. Because $<g> = \{g^n:n\in\mathbb{N}\}$, any
-  $g_1,g_2 \in <g>$ take the form $g_1 = g^n$, $g_2 = g^m$. Therefore,
-  $g_1\cdot g_2 = g^{n+m} \in <g>$ by definition of a generator, so
-  $<g>$ is closed under $\cdot$
+- **Closure**. Because $\lt g \gt = \{g^n:n\in\mathbb{N}\}$, any
+  $g_1,g_2 \in \lt g \gt$ take the form $g_1 = g^n$, $g_2 = g^m$. Therefore,
+  $g_1\cdot g_2 = g^{n+m} \in \lt g \gt$ by definition of a generator, so
+  $\lt g \gt$ is closed under $\cdot$
 
-- **Identity element.** In order for $<g>$ to be a subgroup of
-  $(G,\cdot)$, $e_G \in <g>$. Recall that $e_G$ is the empty move. We
+- **Identity element.** In order for $\lt g \gt$ to be a subgroup of
+  $(G,\cdot)$, $e_G \in \lt g \gt$. Recall that $e_G$ is the empty move. We
   know that repeating the same move over and over will eventually result
   in original state of the cube [@Garron]. This means $\exists k$ such
-  that $g^k = e_G$ $\forall g\in G$. Since $g^k \in <g>$, it follows
-  that $e_G\in <g>, \forall g\in G$.
+  that $g^k = e_G$ $\forall g\in G$. Since $g^k \in \lt g \gt$, it follows
+  that $e_G\in \lt g \gt, \forall g\in G$.
 
-- **Inverses.** Recall that for an element $x \in <g>$ the inverse is
-  $x'\in <g>$, such that $xx' = x'x = e_G$. Let $x' = g^{k-1}$, where
+- **Inverses.** Recall that for an element $x \in \lt g \gt$ the inverse is
+  $x'\in \lt g \gt$, such that $xx' = x'x = e_G$. Let $x' = g^{k-1}$, where
   $k$ is such that $g^k = e_G$ from the proof of the Identity Element.
   Then, $xx' = x'x = e_G$ becomes
 
@@ -232,12 +232,12 @@ his paper, so we will show it here:
 
   which holds
   $\forall g\in G$. Therefore, the inverses of all elements exist in
-  $<g>$.
+  $\lt g \gt$.
 
 - **Associativity.** Associativity is inherited from $G$.
 
 Therefore, we have proven that for any legal move $g\in G$,
-$<g> \leq G$. Unlike $G$, this subgroup is clearly abelian, since only
+$\lt g \gt \leq G$. Unlike $G$, this subgroup is clearly abelian, since only
 one move is involved. This also means that the generators we discussed
 in Section 2.4 Generators are also subgroups of $G$.
 
@@ -452,7 +452,7 @@ we found earlier, regardless of legality.
   the 3x3 Rubik's Cube, but still way too many to count!
 
 - **Element & Subgroup orders.** Because we have shown previously that
-  for any $g\in G$, $<g> \leq G$, we know that $|g| = |<g>|$.
+  for any $g\in G$, $\lt g \gt \leq G$, we know that $|g| = |\lt g \gt|$.
   Furthermore, from Garron, we know that there are 73 possible orders of
   subgroups, ranging from 1 to 1260. The trivial subgroup has order 1,
   $|\{e\}| = 1$, and an example of an element with order 1260 is
@@ -553,7 +553,11 @@ Commutators are moves in $(G,\cdot)$ that take the form [@sweeney2022]
 $$[A,B] = ABA'B'$$ 
 
 As an example, let's examine the first commutator
-from the 2x2 Algorithm: $$[R,U]=RUR'U'$$ There are only 2 faces that are
+from the 2x2 Algorithm: 
+
+$$[R,U]=RUR'U'$$ 
+
+There are only 2 faces that are
 being permuted by $[R,U]$: $R$ and $U$. We move both, and then undo
 both. These faces have one cubicle in common: cubicle 3 (see Figure
 [6](#fig:randu){reference-type="ref" reference="fig:randu"}). But, then
